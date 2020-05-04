@@ -13,7 +13,7 @@ void put(uint8_t row, uint8_t col, uint16_t fgcolor, uint16_t bgcolor)
     uint16_t rw = 80 * row + col;
     // no agarra cuando le mando fgcolor , bgcolor
 
-    // a corre tres bits  y una a b y saca el valor que refleja el color de fondo y letra
+    //  correr 4 bits   y unirlo con b para sacar su valor del vga driver que lo convierte en el color de fondo y letra
     uint16_t color = (a << 4) | (b);
 
     uint16_t *p = (uint16_t *)0xb800;
