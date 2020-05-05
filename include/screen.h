@@ -23,8 +23,7 @@
 #define YELLOW 0xe
 #define BRIGHT_WHITE 0xf
 
-void puts(uint8_t row, uint8_t col, uint8_t fgcolor, uint8_t bgcolor, const char *message);
-void put(uint8_t row, uint8_t col, uint16_t fgcolor, uint16_t bgcolor);
+void puts(uint8_t row, uint8_t col, uint16_t fgcolor, uint16_t bgcolor, char *message);
 void clear_screen(uint8_t bgcolor);
 
 #endif
