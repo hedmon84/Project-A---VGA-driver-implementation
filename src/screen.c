@@ -31,4 +31,14 @@ void puts(uint8_t row, uint8_t col, uint16_t fgcolor, uint16_t bgcolor, char *me
 
 void clear_screen(uint8_t bgcolor)
 {
+    uint16_t color = (bgcolor << 4) | (0xf);
+
+    uint16_t *p = (uint16_t *)0xb800;
+    int i = 0;
+    while (p[i] != 0xcabe)
+    {
+
+        p[i++] = (color << 8) | ' ';
+    }
+    return 0;
 }

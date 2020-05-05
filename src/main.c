@@ -3,9 +3,10 @@
 
 int main()
 {
-    // clear_screen(BLUE);
+    clear_screen(GREEN);
     puts(10, 10, MAGENTA, BLACK, "Hello");
     puts(10, 16, YELLOW, BLACK, "World");
+
     // return 0;
 
     // Example //
